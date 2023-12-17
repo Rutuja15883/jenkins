@@ -26,7 +26,9 @@ pipeline {
                     customImage.push()    
                 }
                    }
-       }stage('Build on kubernetes'){
+       }
+       }
+       stage('Build on kubernetes'){
         steps {
             withKubeConfig([credentialsId: 'kubeconfig']) {
                 sh 'pwd'
@@ -40,4 +42,4 @@ pipeline {
     }
 
 }  
-}  
+
