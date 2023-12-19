@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
     stages {
@@ -42,4 +41,11 @@ pipeline {
                 sh '/usr/local/bin/helm upgrade --install petclinic-app petclinic --set image.repository=rutuja2012/petclinic --set image.tag=${BUILD_NUMBER}'
         }
     }
+}
+
+
+
+
+}
+
 }
